@@ -48,7 +48,7 @@ public class UpdateServlet extends HttpServlet {
 		}else {
 			// 실패
 			request.setAttribute("msg", "수정을 완료하지 못했는데 괜찮으시겠어요?~.~");
-			request.getRequestDispatcher("/member/serviceFailed.jsp").forward(request, response);
+			request.getRequestDispatcher("/WEB-INF/views/common/serviceFailed.jsp").forward(request, response);
 		}
 		
 	}

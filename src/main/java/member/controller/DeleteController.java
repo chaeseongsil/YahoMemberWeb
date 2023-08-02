@@ -40,7 +40,7 @@ public class DeleteController extends HttpServlet {
 			// 1. with Data
 			request.setAttribute("msg", "탈퇴완료~ 안녕히가세요~");
 			request.setAttribute("url", "/member/logout.do");
-			RequestDispatcher view = request.getRequestDispatcher("/member/serviceSuccess.jsp");
+			RequestDispatcher view = request.getRequestDispatcher("/WEB-INF/views/common/serviceSuccess.jsp");
 			view.forward(request, response); // 누락 주의
 			// 2. without Data
 //			response.sendRedirect("/member/serviceSuccess.jsp"); // 데이터 없이 페이지만 이동
@@ -48,7 +48,7 @@ public class DeleteController extends HttpServlet {
 		} else {
 			// 실패
 			request.setAttribute("msg", "탈퇴실패~ 못나가요~");
-			RequestDispatcher view = request.getRequestDispatcher("/member/serviceFailed.jsp");
+			RequestDispatcher view = request.getRequestDispatcher("/WEB-INF/views/common/serviceFailed.jsp");
 			view.forward(request, response);
 		}
 	}
